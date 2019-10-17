@@ -1,0 +1,22 @@
+print('猜数字游戏')
+import random
+bingo = random.randint(1,10)
+temp = input('请输入一个1到10间的数字：')
+num = int(temp)
+i = 1
+while i<=3:
+    if num == bingo:
+        print('恭喜你猜对了！')
+        print('游戏结束')
+        break
+    elif i == 3:
+        print('次数用尽，游戏结束')
+
+    else:
+        if num > bingo:
+            print('数字过大，请重新尝试！')
+        else:
+            print('数字过小，请重新输入！')
+        temp = input('重新输入：')
+        num = int(temp)
+    i+= 1
